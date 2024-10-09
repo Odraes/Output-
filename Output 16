@@ -1,0 +1,99 @@
+#include <iostream>
+#include <conio.h>
+#include <cstdlib> // Corrected from stalib.h
+using namespace std;
+
+int main() {
+    int PT, OT, TD, Error, MSR, ITW, RPH, Late, MC, Hworked, Gpay, Npay, SSS, PAGIBIG;
+    char Enumber[101], Ename[251], Baddress[101], Eposition[101], Age[101], status[101];
+
+    system("cls"); // Corrected from "cis" to "cls"
+    cout << "\n\tMABUTIN COMPANY";
+    cout << "\n----";
+    cout << "\n\nChoose if the Employee is Permanent or Temporary";
+    cout << "\n\n[1= Permanent, 2= Temporary]";
+    cout << "\n\nEnter number: ";
+    cin >> PT;
+
+    switch (PT) {
+        case 1: // Permanent
+            cout << "\nEmployee Type: Permanent\n";
+            cout << "\nEmployee Number: ";
+            cin >> Enumber;
+            cout << " \nEmployee Name: ";
+            cin >> Ename;
+            cout << "\nEmployee Position: ";
+            cin >> Eposition;
+            cout << "\nEmployee Address: ";
+            cin >> Baddress;
+            cout << "\nAge: ";
+            cin >> Age;
+            cout << "\nStatus: ";
+            cin >> status;
+
+            Hworked = 200;
+            ITW = 10;
+            MSR = 20000;
+            MC = 160;
+            PAGIBIG = 100;
+            OT = 200;
+            Late = 30;
+            RPH = 505;
+
+            cout << "\n\nNo of Hours Worked: " << Hworked;
+            cout << "\n\nMonthly Salary Rate: " << MSR;
+            Gpay = (Hworked * RPH) + OT;
+            cout << "\n\nEnter C to Compute: ";
+            cin >> TD >> SSS >> PAGIBIG >> ITW >> MC >> Late;
+
+            cout << "\n\nGross pay: " << Gpay;
+            TD = SSS + PAGIBIG + ITW + MC + Late;
+            Npay = Gpay - TD;
+            cout << "\n\nTotal Deduction: " << TD;
+            cout << "\nNet pay: " << Npay;
+            break;
+
+        case 2: // Temporary
+            cout << "\nEmployee Type: Temporary\n";
+            cout << "\nEmployee Number: ";
+            cin >> Enumber;
+            cout << "\nEmployee Name: ";
+            cin >> Ename;
+            cout << "\nEmployee Position: ";
+            cin >> Eposition;
+            cout << "\nAge: ";
+            cin >> Age;
+            cout << "\nStatus: ";
+            cin >> status;
+
+            Hworked = 200;
+            ITW = 10;
+            MSR = 20000;
+            MC = 100;
+            PAGIBIG = 100;
+            OT = 150;
+            Late = 30;
+            RPH = 457;
+
+            cout << "\n\nNo of Hours Worked: " << Hworked;
+            cout << "\n\nMonthly Salary Rate: " << MSR;
+            Gpay = (Hworked * RPH) + OT;
+            cout << "\n\nEnter C to Compute: ";
+            cin >> TD >> SSS >> PAGIBIG >> ITW >> MC >> Late;
+
+            cout << "\n\nGross Pay: " << Gpay;
+            TD = SSS + PAGIBIG + ITW + MC + Late;
+            Npay = Gpay - TD;
+            cout << "\nTotal Deduction: " << TD;
+            cout << "\nNet Pay: " << Npay;
+            break;
+
+        default: // Error case
+            Error = PT;
+            cout << "\nError! Invalid option!";
+            break;
+    }
+
+    getch();
+    return 0;
+}
