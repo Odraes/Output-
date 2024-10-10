@@ -1,0 +1,65 @@
+#include <iostream>
+#include <conio.h>
+#include <cstdlib> // Use cstdlib instead of stdlib.h
+using namespace std;
+
+int empnum, hrswork, hrsrate, totded, gpay, npay, sss, philhealth, pagibig, late;
+char empname[51], position[15];
+
+// Function to calculate deductions
+int deduction() {
+    sss = 100;
+    philhealth = 100;
+    pagibig = 100;
+    late = 100;
+    totded = sss + philhealth + pagibig + late;
+    cout << "\nTotal Deduction: " << totded;
+    return totded;
+}
+
+// Function to calculate gross pay
+int grosspay() {
+    cout << "\nHours Worked: ";
+    cin >> hrswork;
+    cout << "Hours Rate: ";
+    cin >> hrsrate;
+    gpay = hrswork * hrsrate;
+    cout << "\nGross Pay: " << gpay;
+    return gpay;
+}
+
+// Function to calculate net pay
+int netpay() {
+    npay = gpay - totded;
+    cout << "\nNet Pay: " << npay;
+    return npay;
+}
+
+int main() {
+    system("cls");
+    system("color 3e");
+
+    cout << "********************\n";
+    cout << "* 1. Rodgilyn Anonuevo *\n";
+    cout << "* 2. Maeann V. Banawa  *\n";
+    cout << "********************\n";
+
+    cout << "Employee No: ";
+    cin >> empnum;
+    cout << "Employee Name: ";
+    cin >> empname;
+    cout << "Position: ";
+    cin >> position;
+    cout << endl;
+
+    deduction(); // Call deduction function
+    grosspay();  // Call gross pay function
+    netpay();    // Call net pay function
+
+    cout << "\n********************";
+    cout << "\n* Submitted to: Mr. Gibson Olazo *";
+    cout << "\n********************\n";
+
+    getch(); // Wait for a key press
+    return 0; // Added return statement
+}
