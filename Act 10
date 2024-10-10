@@ -1,0 +1,40 @@
+#include <iostream>
+#include <conio.h>
+#include <cstdlib>
+using namespace std;
+
+int id, hrs, sss, pagibig, philhealth, late, gross, net, totded;
+char empname[51], position[15];
+
+// Function to set employee details
+int setEmployee() {
+    system("color 1F");
+    cout << "Enter Employee ID: ";
+    cin >> id;
+    cout << "Employee Name: ";
+    cin >> empname;
+    cout << "Position: ";
+    cin >> position;
+
+    cout << "SSS: ";
+    cin >> sss;
+    cout << "PhilHealth: ";
+    cin >> philhealth;
+    cout << "Pag-IBIG: ";
+    cin >> pagibig;
+    cout << "Late: ";
+    cin >> late;
+
+    totded = sss + philhealth + pagibig + late;
+    cout << "Total Deduction: " << totded << endl;
+    getch();
+    return totded;
+}
+
+// Function to calculate gross pay
+int calculateGross() {
+    cout << "Hours Worked: ";
+    cin >> hrs;
+    cout << "Hourly Rate: ";
+    cin >> gross;
+ 
