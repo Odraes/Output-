@@ -1,0 +1,17 @@
+#include <iostream>
+#include <conio.h>
+#include <cstdlib> // Corrected from stdlib.h
+using namespace std;
+
+int main() {
+    int prod, num;
+
+    system("cls"); // Clear the screen
+    cout << "Enter Number: ";
+    cin >> num; // Corrected input operator
+    prod = num * 2; // Fixed assignment
+    cout << "The Product is: " << prod; // Corrected output syntax
+
+    getch(); // Wait for a key press
+    return 0; // Added return statement
+}
