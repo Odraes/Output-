@@ -1,0 +1,37 @@
+#include <iostream>
+#include <conio.h>
+#include <cstdlib> // Use cstdlib instead of sstdlib.h
+using namespace std;
+
+int main() {
+    system("color 2F");
+    
+    cout << "Hands on Quiz #3\n";
+    cout << "# Name of Students: Maconn V. Banawa\n";
+    cout << "# Rodgilyn M. Anonuevo\n";
+
+    int grade; // Correct variable declaration
+    cout << "Enter grade: ";
+    cin >> grade; // Corrected input operator
+
+    if (grade >= 95 && grade <= 100) {
+        cout << "\nYour Grade is A+";
+    } else if (grade >= 90 && grade < 95) {
+        cout << "\nYour Grade is A";
+    } else if (grade >= 85 && grade < 90) {
+        cout << "\nYour Grade is B+";
+    } else if (grade >= 80 && grade < 85) {
+        cout << "\nYour Grade is B";
+    } else if (grade >= 75 && grade < 80) {
+        cout << "\nYour Grade is C";
+    } else {
+        cout << "\nYour Grade is D";
+    }
+
+    cout << "\nPresented to:\n";
+    cout << "Mr. Gibson J. Olazo\n";
+    cout << "Teacher\n";
+
+    getch(); // Wait for a key press
+    return 0; // Added return statement
+}
