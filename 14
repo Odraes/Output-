@@ -1,0 +1,26 @@
+#include <iostream>
+#include <conio.h>
+#include <cstdlib> // Use cstdlib for system functions
+using namespace std;
+
+int num1, num2; // Declare variables
+
+// Function to calculate the difference
+int sub() {
+    int result = num1 - num2;
+    cout << "The Difference is: " << result << endl; 
+    return result;
+}
+
+int main() {
+    system("cls"); // Clear the screen
+    cout << "Enter Num1 and Num2: "; 
+    cin >> num1 >> num2; // Input numbers
+    
+    sub(); // Call the sub function
+    int sum = num1 + num2; // Calculate the sum
+    cout << "The sum of two numbers is: " << sum << endl; // Output sum
+    
+    getch(); // Wait for a key press
+    return 0; // Return statement
+}
