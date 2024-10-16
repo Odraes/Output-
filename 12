@@ -1,0 +1,20 @@
+#include <iostream>
+#include <conio.h>
+#include <cstdlib> // Use cstdlib for system functions
+using namespace std;
+
+int main() {
+    system("cls"); // Clear the screen
+    int counter = 0; // Initialize the counter
+
+    // While loop with a condition
+    while (counter < 5) {
+        // Body of the loop
+        cout << "counter: " << counter << "\n"; // Correct output
+        cout << "Complete. Counter: " << counter << ". \n"; // Fixed output
+        counter++; // Increment the counter
+    }
+
+    getch(); // Wait for a key press
+    return 0;
+}
