@@ -1,0 +1,40 @@
+#include <iostream>
+#include <conio.h>
+#include <cstdlib> // Use cstdlib for system functions
+using namespace std;
+
+int empnum, hrswork, hrsrate, totded, gpay, npay, sss, philhealth, pagibig, late;
+char empname[50], position[15];
+
+// Function to calculate deductions
+int deduction() {
+    sss = philhealth = pagibig = late = 100; // Set deduction values
+    totded = sss + philhealth + pagibig + late; // Calculate total deductions
+    cout << "Total Deduction: " << totded << endl;
+    return totded; // Return total deductions
+}
+
+// Function to calculate gross pay
+int grosspay() {
+    cout << "Hours Worked: "; 
+    cin >> hrswork; // Input hours worked
+    cout << "Hours Rate: "; 
+    cin >> hrsrate; // Input hourly rate
+    gpay = hrswork * hrsrate; // Calculate gross pay
+    cout << "Gross Pay: " << gpay << endl;
+    return gpay; // Return gross pay
+}
+
+// Function to calculate net pay
+int netpay() {
+    npay = gpay - totded; // Calculate net pay
+    cout << "Net Pay: " << npay << endl; // Output net pay
+    return npay; // Return net pay
+}
+
+int main() {
+    system("cls"); // Clear the screen
+    cout << "Employee No: "; 
+    cin >> empnum; // Input employee number
+    cout << "Employee Name: "; 
+    cin >> empname; 
