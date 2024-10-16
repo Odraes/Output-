@@ -1,0 +1,28 @@
+#include <iostream>
+#include <conio.h>
+#include <cstdlib> // Use cstdlib for system functions
+using namespace std;
+
+// Function to set cursor position (Windows specific)
+void gotoxy(int x, int y) {
+    COORD coord;
+    coord.X = x;
+    coord.Y = y;
+    SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), coord);
+}
+
+int main() {
+    int row, col;
+    system("cls"); // Clear screen
+    row = col = 1;
+    
+    for(row = 1; row < 6; row++) {
+        for(col = 1; col < 6; col++) {
+            gotoxy(col, row); // Corrected function call
+            cout << "*"; // Print an asterisk
+        }
+    }
+    
+    getch(); // Wait for a key press
+    return 0;
+}
