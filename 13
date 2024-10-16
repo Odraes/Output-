@@ -1,0 +1,19 @@
+#include <iostream>
+#include <conio.h>
+#include <cstdlib> // Use cstdlib for system functions
+using namespace std;
+
+int main() {
+    int counter; // Declare counter
+    cout << "How many hellos? : "; 
+    cin >> counter; // Input from user
+
+    while (counter > 0) {
+        cout << "Hello!\n"; // Output hello
+        counter--; // Decrement counter
+    }
+
+    cout << "Counter is Output: " << counter << "\n"; // Final output
+    getch(); // Wait for a key press
+    return 0; // Return statement
+}
